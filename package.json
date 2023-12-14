@@ -1,0 +1,37 @@
+{
+  "name": "@rhythm-gaming/vsrg-chart-view",
+  "version": "0.0.1",
+  "description": "Web-based chart viewer for VSRG rhythm games.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -r dist/",
+    "prepare": "npm run build",
+    "build": "npx tsc",
+    "watch": "npx tsc --watch",
+    "lint": "npx eslint src/"
+  },
+  "keywords": [
+    "vsrg",
+    "chart",
+    "viewer",
+    "rgc"
+  ],
+  "author": "Jimin Park",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhythm-gaming/vsrg-chart-view/issues"
+  },
+  "homepage": "https://github.com/rhythm-gaming/vsrg-chart-view",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@rhythm-gaming/rgc": "github:rhythm-gaming/rgc",
+    "three": "^0.159.0"
+  }
+}
