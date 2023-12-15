@@ -1,5 +1,7 @@
 // @ts-check
 
-import * as test from "./build/index.js";
+import {ChartView} from "./build/index.js";
 
-console.log(test);
+(async function main() {
+    const chart_view = new ChartView(document.getElementById('root'));
+})();

@@ -69,4 +69,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             if(tryReloadCSS(changed)) return;
         } catch(err) {}
     });
+
+    const preload_elem = document.getElementById('live-reload-style');
+    if(preload_elem) {
+        preload_elem.parentElement?.removeChild(preload_elem);
+    }
 });

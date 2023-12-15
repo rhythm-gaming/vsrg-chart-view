@@ -8,8 +8,8 @@
   "scripts": {
     "clean": "rm -r dist/",
     "prepare": "npm run clean && npm run build && npm run build-decl",
-    "build": "node ./build.js --target=module",
-    "build-decl": "npx tsc",
+    "build": "npx tsc",
+    "build-decl": "npx tsc --emitDeclarationOnly true",
     "debug": "node ./build.js --target=serve",
     "lint": "npx eslint src/",
     "tsc-watch": "npx tsc --watch"
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/rhythm-gaming/vsrg-chart-view",
   "devDependencies": {
+    "@types/three": "^0.159.0",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "args-parser": "^1.3.0",
