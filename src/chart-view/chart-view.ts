@@ -12,8 +12,15 @@ export class ChartView {
     #scene = new THREE.Scene();
     #renderer = new THREE.WebGLRenderer();
 
-    constructor(root: HTMLDivElement) {
+    #width = 800;
+    #height = 600;
+
+    constructor(root: HTMLDivElement, chart: Chart|null = null) {
         this.#root = root;
+        this.#setChart(chart);
+
+        this.#renderer.setSize(this.#width, this.#height);
+        this.#root.appendChild(this.#renderer.domElement);
     }
 
     #setChart(chart: Chart|null) {
